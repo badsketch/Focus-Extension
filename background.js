@@ -31,7 +31,7 @@ chrome.runtime.onMessage.addListener(
 				xhttp.open("GET",apiUrl,false);
 				xhttp.send();
 				
-				if(cat == 10)
+				if(cat != 27)
 				{	
 					console.log("music");
 					if (chrome.webRequest.onBeforeRequest.hasListener(blocker)) {
