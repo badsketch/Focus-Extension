@@ -1,0 +1,27 @@
+{
+	"manifest_version": 2,
+	
+	"name": "Focus",
+	"description": "filters youtube videos to increase productivity",
+	"version": "1.0",
+	
+	"browser_action": {
+		"default_icon": "yt3.png",
+	},
+	"content_scripts": [
+		{
+		"matches": ["https://www.youtube.com/*"],
+		"js":["content.js"]
+		}
+	],
+	"background": {
+		"scripts": ["jquery-3.2.0.min.js","background.js"]
+	},	
+	"permissions": [
+		"tabs",
+		"https://www.apis.google.com/*",
+		"webRequest",
+		"webRequestBlocking",
+		"https://*/*"
+	]
+}	
